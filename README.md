@@ -76,7 +76,8 @@ So, In layman's terms, We can say that that inverter is the circuit that perform
 Now, here I have designed an inverter in LT Spice, as  we had already calculated the width of PMOS as 4 times the width of NMOS using that I have taken ```W_NMOS=0.36u``` and ```W_PMOS=1.44u```.
 Here is its schematic in LT Spice.
 
-cmos inverter schematic
+![cmosinv_sch](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/3b80a74b-e027-4be5-bfc2-16a94c7ccc16)
+
 
 #### 2.2.1 DC Analysis and Important Design Parameters
 We are going to plot  the Voltage Transfer Characteristics (VTC) curve for the inverter using DC analysis. 
@@ -94,7 +95,8 @@ Now let us understand, What other parameters can be calculated using this curve:
 we can see from the above picture that the inverter has five regions of operation.
 Also, refer to the below picture:
 
-![nm_inv](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/7c229279-0d7c-43d5-8b6f-65c0ab3d58f2)
+![nm_inv](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/62b7b7fb-4de5-45ad-862f-64d480e98460)
+
 
 Let us understand the important parameters of this device that are based on its VTC curve.
 
@@ -102,10 +104,28 @@ VOH - Maximum output voltage when it is logic '1'.
 VOL - Minimum output voltage when it is logic '0'.
 VIH - Maximum input voltage that can be interpreted as logic '0'.
 VIL - Minimum input voltage that can be interpreted as logic '1'.
-Vth - Inverter Threshold voltage (Switching Threshold which we have already calculated using VTC)
+Vth - Inverter Threshold voltage (Switching Threshold which we have already calculated to be ```0.903V``` using VTC)
 The above five are critical for an Inverter and can be seen on the VTC curve of an inverter. One thing to point out now would be,
 
 Vth should be at a value of VDD/2 for maximum noise margins
+
+Now, using the property when ```d(vout)/d(vin) = -1``` we can calculate all these parameters by plotting the ```vout``` and then applying ```d( )``` on it and using the marker for measuring in LT Spice.
+
+![vil_and_vih](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/87d0bdcf-85dc-468f-8825-36ea0a1f1e25)
+
+From the above graph, ```VIL=0.78V``` and ```VIH=1.01V ```are calculated and now, using these values from VTC we can calculate VOL and VOH.
+
+![vol_and_voh](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/1d7e1120-9611-4b48-9dc8-54c1ee356936)
+
+from the graph, we calculated ```VOL=0.1V``` and ```VOH=1.69V```.
+
+Now, Next is Noise Margins. Noise margins are defined as the range of values for which the device can work noise-free or with high resistance to noise. This is an important parameter for digital circuits, since they work with a set of specific values(2 for binary systems), so it becomes crucial to know what values of the voltages can sustain for each value. This range is also referred to as Noise Immunity. There are two such values of Noise margins for a binary system:
+NML(Noise Margin for Low) = VIL - VOL
+NMH(Noise Margin for HIGH) = VOH - VIH
+
+So for our calculated values, the device would have, NML = 0.682V and NMH = 0.68V.
+
+In our case, they are very accurate and equal but there can be cases where they are not the same, and as Vth can be not near to vdd/2.
 
 
 
