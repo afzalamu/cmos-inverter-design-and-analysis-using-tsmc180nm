@@ -140,7 +140,6 @@ Here is the summary of our results.
 
 # Credits
 [Inverter Design and Analysis using Sky130PDK](https://github.com/D-curs-D/Inverter-design-and-analysis-using-sky130pdk)
-This repository contains the implementation of a CMOS inverter design and analysis using the Sky130 Process Design Kit (PDK). The project explores MOSFET models and progresses to the analysis of a CMOS inverter, aiming to obtain relevant plots and extract key performance parameters.
 This was one of the repositories that I came across when I was starting with circuit Design and Simulation. This was a great help for me to start with.  
 
 I also want to acknowledge [Youtuber @whyRD](https://www.youtube.com/@whyRD) whose videos served as a valuable resource when I started learning this open-source EDA software at the start year of college.
