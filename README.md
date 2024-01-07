@@ -126,6 +126,16 @@ NMH(Noise Margin for HIGH) = VOH - VIH
 So for our calculated values, the device would have, NML = 0.682V and NMH = 0.68V.
 
 In our case, they are very accurate and equal but there can be cases where they are not the same, and as Vth can be not near to vdd/2.
+Here is the summary of our results.
+
+| Parameter | Value   |
+|-----------|---------|
+| Vth       | 0.903V  |
+| VIL       | 0.78V   |
+| VIH       | 1.01V   |
+| VOL       | 0.1V    |
+| VOH       | 1.69V   |
+
 
 
 
