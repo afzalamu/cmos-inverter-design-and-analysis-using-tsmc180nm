@@ -36,11 +36,11 @@ Now, you can view the spice error log file in LT Spice by using ``` ctrl + L``` 
 ![vtn_value](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/ec25154c-1e7d-4d04-b4e6-b9950b380306)
 
 Hence, we now have all the important values we need. The same can be done for a PMOS. 
-The motive is the same, but especially to extract the value of the Aspect ratio for which the current is the same in both NMOS and PMOS.
-I have done some experimentation and found that at W/L of PMOS = 4 * (Aspect ratio of NMOS), the current value is pretty close.
 
 ![pmos setup](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/0e1cb595-7d56-4d83-bcea-4694419d7780)
 
+The motive is the same, but especially to extract the value of the Aspect ratio for which the current is the same in both NMOS and PMOS.
+I have done some experimentation and found that at W/L of PMOS = 4 * (Aspect ratio of NMOS), the current value is pretty close.
 So, we found the NMOS had a current of 9.1 microamps while PMOS had a current of 9.5 microamps (both at |Vgs| = 0.65V). (NOT BAD!!)
 
 
