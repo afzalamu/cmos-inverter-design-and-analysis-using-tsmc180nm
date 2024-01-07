@@ -58,6 +58,21 @@ here also let us look at some schematic and waveforms in LT Spice
 
 Therefore, both NMOS and PMOS alone do not serve as effective inverters. Various configurations were considered, but ultimately, one emerged as the most popular circuit design using MOSFETs, known as a CMOS configuration.
 ---
+## 2. CMOS INVERTER
+### 2.1. Why Choose CMOS Circuits
+
+In the preceding section, we made an interesting observation: neither NMOS nor PMOS alone can effectively generate both HIGH and LOW values. However, they exhibit a complementary relationship. This insight led to the concept of combining them. Leveraging PMOS as a Strong 1, we position it between VDD and Vout, while NMOS, functioning as a STRONG 0, is situated between Vout and GND. By doing so, each can serve as a load for the other transistor, ensuring they are never ON simultaneously (or are they?). This arrangement is known as the Complementary Metal Oxide Semiconductor (CMOS) Configuration, representing the simplest circuit called the CMOS Inverter.
+
+![cmosinv](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/1ef54685-d4fb-459b-9eba-a0e2c050ee75)
+
+
+CMOS Circuits typically involve a network divided into two segments: the upper section is referred to as the pull-up network and the lower half as the pull-down network. The former incorporates P-channel MOSFETs, while the latter employs N-channel MOSFETs. The rationale is straightforward: as one transistor turns on, the other turns off, eliminating the issue of a resistive path to the ground and minimizing voltage division (at least not significantly). This arrangement allows for easily achieving both Strong High and Strong Low outputs from the same network. The pull-up provides a low-resistance path to VDD, while the pull-down offers a low-resistance path to GND.
+
+<img width="1046" alt="punand pdn" src="https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/b11aa9f9-e173-42d9-a800-7e4a14b92509">
+
+### 2.2. CMOS Inverter Design and Analysis using LT Spice
+
+
 
 
 
