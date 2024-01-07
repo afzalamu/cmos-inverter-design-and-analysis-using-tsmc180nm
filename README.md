@@ -71,6 +71,47 @@ CMOS Circuits typically involve a network divided into two segments: the upper s
 <img width="1046" alt="punand pdn" src="https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/b11aa9f9-e173-42d9-a800-7e4a14b92509">
 
 ### 2.2. CMOS Inverter Design and Analysis using LT Spice
+Before moving further, First, let us understand What is an Inverter?
+So, In layman's terms, We can say that that inverter is the circuit that performs the NOT function or we can say that inverts and it is characterized practically by various parameters such as Noise Margin and speed.
+Now, here I have designed an inverter in LT Spice, as  we had already calculated the width of PMOS as 4 times the width of NMOS using that I have taken ```W_NMOS=0.36u``` and ```W_PMOS=1.44u```.
+Here is its schematic in LT Spice.
+
+cmos inverter schematic
+
+#### 2.2.1 DC Analysis and Important Design Parameters
+We are going to plot  the Voltage Transfer Characteristics (VTC) curve for the inverter using DC analysis. 
+Here we sweep the ``` Vin``` from ``` 0V to 1.8V ``` and plot the ``` vin``` and ```vout```.
+using the following command ```.dc vin 0 1.8 1m```
+Here is the resulting waveform:
+
+![vtc_inv](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/37db0840-cb28-436b-bb96-fb409eee6717)
+
+Here we can see from the curve that ```vin=vout``` at ```0.903V``` which is approximately equal to ```vdd/2``` later we will see that it is termed as the switching threshold of an inverter.
+Now let us understand, What other parameters can be calculated using this curve:
+
+![vtc_book](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/effafbef-38d0-4426-8bda-fec545308698)
+
+we can see from the above picture that the inverter has five regions of operation.
+Also, refer to the below picture:
+
+![nm_inv](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/7c229279-0d7c-43d5-8b6f-65c0ab3d58f2)
+
+Let us understand the important parameters of this device that are based on its VTC curve.
+
+VOH - Maximum output voltage when it is logic '1'.
+VOL - Minimum output voltage when it is logic '0'.
+VIH - Maximum input voltage that can be interpreted as logic '0'.
+VIL - Minimum input voltage that can be interpreted as logic '1'.
+Vth - Inverter Threshold voltage (Switching Threshold which we have already calculated using VTC)
+The above five are critical for an Inverter and can be seen on the VTC curve of an inverter. One thing to point out now would be,
+
+Vth should be at a value of VDD/2 for maximum noise margins
+
+
+
+
+
+
 
 
 
