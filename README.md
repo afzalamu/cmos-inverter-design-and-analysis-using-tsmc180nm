@@ -50,6 +50,15 @@ What does the above mean? Look at the schematic and waveforms below,
 
 Here we can see that when a square wave is applied to the input of NMOS when it is logic LOW(0V), the output goes to HIGH(1.8V). But when the input is logic HIGH(1.8V), the output goes to a value that is much larger than 0V. This is because when Vgs is 1.8V, the NMOS is in the linear region. This is where the MOSFET acts as a voltage-controlled resistor. At this point, the output is connected to a Voltage Divider Configuration. That is the output takes the value which is defined by the voltage across the resistance of the MOSFET. Hence, NMOS can transmit STRONG 0, but not STRONG 1.
 
+### 1.3 STRONG 1 AND WEAK 0
+here also let us look at some schematic and waveforms in LT Spice
+
+![strong1weak0pmos_setup](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/4299501d-37f4-4f5b-bdbf-e80076e037db)
+![strong1weak0pmos](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/480f6815-2c84-4bed-9871-4ea273557479)
+
+Therefore, both NMOS and PMOS alone do not serve as effective inverters. Various configurations were considered, but ultimately, one emerged as the most popular circuit design using MOSFETs, known as a CMOS configuration.
+---
+
 
 
 
