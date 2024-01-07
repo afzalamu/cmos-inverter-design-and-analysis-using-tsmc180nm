@@ -139,6 +139,8 @@ Here is the summary of our results.
 
 
 # Credits
+This work is also the part of simulation tasks given to us in our VLSI Design and Technology course in the fifth semester and also in LT Spice Lab.
+
 [Inverter Design and Analysis using Sky130PDK](https://github.com/D-curs-D/Inverter-design-and-analysis-using-sky130pdk)
 This was one of the repositories that I came across when I was starting with circuit Design and Simulation. This was a great help for me to start with.  
 
