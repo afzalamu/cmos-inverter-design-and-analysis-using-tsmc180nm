@@ -55,9 +55,9 @@ here also let us look at some schematic and waveforms in LT Spice
 
 ![strong1weak0pmos_setup](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/4299501d-37f4-4f5b-bdbf-e80076e037db)
 ![strong1weak0pmos](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/480f6815-2c84-4bed-9871-4ea273557479)
-
 Therefore, both NMOS and PMOS alone do not serve as effective inverters. Various configurations were considered, but ultimately, one emerged as the most popular circuit design using MOSFETs, known as a CMOS configuration.
----
+
+
 ## 2. CMOS INVERTER
 ### 2.1. Why Choose CMOS Circuits
 
