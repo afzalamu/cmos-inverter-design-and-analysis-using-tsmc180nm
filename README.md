@@ -13,4 +13,8 @@ The curve is plotted between ```Id vs vgs``` by sweeping vgs from ```0 to 1.8V``
 ![idvsvgs_curve_nmos](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/1fac79fd-5481-4378-8308-732151c8d154)
 and from this curve, we can obtain the ```gm``` transconductance curve for NMOS, by editing the command in the waveform viewer in LT Spice as ```d(Id(M2))```.The deriv() function takes the derivative with respect to the independent variable present at the current simulation. From the definition of Gm we are aware that it is dId/dVgs.
 ![gm_nmos](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/5ef81e46-10cb-4ccb-83de-87f44f617a13)
+Now, I am plotting ```Id vs vds``` curve, and here is the LT spice setup for that.
+![image](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/bea0ebbc-16c1-40e3-a740-f62e28649df4)
+The curve is plotted between ```Id vs vds``` by sweeping vds from ```0 to 1.8V```for different values of vgs, for this use the commands shown in the schematic.
+and from this curve, we can obtain the ```ro_nmos```  for NMOS, by editing the command in the waveform viewer in LT Spice as ```d(Id(M2))```.The deriv() function takes the derivative with respect to the independent variable present at the current simulation. From the definition of ```ro``` we are aware that it is dId/dVds.
 and now, we will calculate the Threshold voltage for NMOS ```vtn```
