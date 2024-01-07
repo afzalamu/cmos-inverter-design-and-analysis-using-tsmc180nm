@@ -11,4 +11,6 @@ So, first I am plotting ```Id vs vgs```  curve, and here is the LT spice setup f
 ![setup_idvsvgs_nmos](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/e15fd56e-85a8-4bfa-9fa7-2517f9f95df7)
 The curve is plotted between ```Id vs vgs``` by sweeping vgs from ```0 to 1.8V```for different values of vds, for this use the commands shown in the schematic.
 ![idvsvgs_curve_nmos](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/1fac79fd-5481-4378-8308-732151c8d154)
-
+and from this curve, we can obtain the ```gm``` transconductance curve for NMOS, by editing the command in the waveform viewer in LT Spice as ```d(Id(M2))```.
+![gm_nmos](https://github.com/afzalamu/cmos-inverter-design-and-analysis-using-tsmc180nm/assets/124300839/5ef81e46-10cb-4ccb-83de-87f44f617a13)
+and now, we will calculate the Threshold voltage for NMOS ```vtn```
